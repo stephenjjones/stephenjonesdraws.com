@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stephen Jones Draws</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <style>
+             /* Gallery Grid */
+        body {
+            font-family: "Trebuchet MS", "Helvetica", "Arial", sans-serif;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: #666;
+            margin-top: -0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            display: block;
+            text-align: center;
+            font-size: 1rem;
+            color: #666;
+            margin-top: -0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, max-content)); /* Responsive columns */
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        /* Gallery Items */
+        .gallery img {
+            height: 350px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Hover Effect */
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90vh;
+            margin: auto;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            font-size: 24px;
+            transition: background-color 0.3s;
+            z-index: 1001;
+        }
+
+        .nav-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .prev-button {
+            left: 20px;
+        }
+
+        .next-button {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-button {
+                padding: 12px;
+                font-size: 18px;
+            }
+        }
+
+        /* Instagram Icon */
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .social-icons img:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            text-align: center;
+            color: #c2492b;
+        }
+        </style>
+    </head>
+<body>
+    <header>
+        <h1>STEPHEN JONES</h1>
+        <span class="subtitle" style="display: block; margin: 0 auto;">AUTHOR, ILLUSTRATOR, PICTURE BOOK MAKER</span>
+        
+        <nav style="display: flex; justify-content: center;">
+            <a href="https://www.instagram.com/stephenjonesdraws/" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+                <img src="/images/Instagram_Glyph_Gradient.png" alt="Instagram" style="width: 24px; height: 24px;">
+                @stephenjonesdraws
+            </a>
+        </nav>
+    </header>
+    
+    
+    
+    <!-- image gallery-->
+    <main class="container">
+        <section class="gallery">
+            <img src="/images/raccoons.png" alt="Raccoon mischief" onclick="openModal(this.src)">
+            <img src="/images/egg_heist.png" alt="Egg Heist" onclick="openModal(this.src)">
+            <img src="/images/honey_yoga.png" alt="Frog and Bear Yoga" onclick="openModal(this.src)">
+            <img src="/images/rhino_research.png" alt="Researching Rhinos" onclick="openModal(this.src)">
+            <img src="/images/rhino_door.png" alt="Pulling rhino through door" onclick="openModal(this.src)">
+            <img src="/images/rhino_sleep.png" alt="sleeping with rhino" onclick="openModal(this.src)">
+            <img src="/images/Acorn_drop.png" alt="Acorn Drop" onclick="openModal(this.src)">
+            <img src="/images/the_chase.png" alt="the chase" onclick="openModal(this.src)">
+        </section>
+        <section id="about" style="margin: 4rem 0; text-align: center;">
+            <span class="subtitle" style="margin-bottom: 1rem;">ABOUT ME</span>
+            <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
+I’m an author-illustrator and homeschool dad in Alpharetta, Georgia, where I balance writing picture books with lesson plans, snack duty, and spontaneous craft projects. My stories are full of heart, humor, and expressive characters—drawing inspiration from the everyday chaos and magic of life with kids.
+            </p>
+        </section>
+        <section id="contact" style="margin: 4rem 0; text-align: center;">
+            <span class="subtitle" style="margin-bottom: 1rem;">CONTACT</span>
+            <div class="contact-links" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <a href="https://www.instagram.com/stephenjonesdraws/" target="_blank" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="/images/Instagram_Glyph_Gradient.png" alt="Instagram" style="width: 24px; height: 24px;">
+                    @stephenjonesdraws
+                </a>
+                <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#116;&#101;&#112;&#104;&#101;&#110;&#46;&#106;&#97;&#99;&#111;&#98;&#46;&#106;&#111;&#110;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;" style="display: flex; align-items: center; gap: 8px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                        <path d="M2 6l10 7L22 6"></path>
+                    </svg>
+                    &#115;&#116;&#101;&#112;&#104;&#101;&#110;&#46;&#106;&#97;&#99;&#111;&#98;&#46;&#106;&#111;&#110;&#101;&#115;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <button class="nav-button prev-button" onclick="event.stopPropagation(); navigateImage(-1)">←</button>
+        <button class="nav-button next-button" onclick="event.stopPropagation(); navigateImage(1)">→</button>
+        <img id="modalImage" src="" alt="Full screen image" onclick="event.stopPropagation()">
+    </div>
+
+    <footer>
+        <p style="text-align: center;">&copy; 2025 Stephen J Jones</p>
+    </footer>
+
+    <script>
+        let currentImageIndex = 0;
+        const galleryImages = document.querySelectorAll('.gallery img');
+
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            
+            // Find the index of the clicked image
+            currentImageIndex = Array.from(galleryImages).findIndex(img => img.src === imgSrc);
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+        }
+
+        function navigateImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + galleryImages.length) % galleryImages.length;
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = galleryImages[currentImageIndex].src;
+        }
+
+        // Handle arrow key navigation
+        document.addEventListener('keydown', function(event) {
+            if (document.getElementById('imageModal').style.display === "block") {
+                switch(event.key) {
+                    case "Escape":
+                        closeModal();
+                        break;
+                    case "ArrowLeft":
+                        navigateImage(-1);
+                        break;
+                    case "ArrowRight":
+                        navigateImage(1);
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
