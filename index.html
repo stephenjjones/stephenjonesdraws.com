@@ -36,11 +36,12 @@
             grid-template-columns: repeat(auto-fit, minmax(350px, max-content)); /* Responsive columns */
             gap: 1rem;
             padding: 1rem;
+            justify-content: center; /* Centers the grid items */
         }
 
         /* Gallery Items */
         .gallery img {
-            height: 350px;
+            height: 250px;
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease-in-out;
@@ -153,6 +154,7 @@
     </head>
 <body>
     <header>
+        <img src="/images/crab.jpg" alt="Crab illustration" style="display: block; margin: 2rem auto; max-width: 150px; height: auto;margin-bottom:0;">
         <h1>STEPHEN JONES</h1>
         <span class="subtitle" style="display: block; margin: 0 auto;">AUTHOR, ILLUSTRATOR, PICTURE BOOK MAKER</span>
         
@@ -168,20 +170,23 @@
     
     <!-- image gallery-->
     <main class="container">
-        <section class="gallery">
-            <img src="/images/raccoons.jpg" alt="Raccoon mischief" onclick="openModal(this.src)">
-            <img src="/images/egg_heist.jpg" alt="Egg Heist" onclick="openModal(this.src)">
-            <img src="/images/honey_yoga.jpg" alt="Frog and Bear Yoga" onclick="openModal(this.src)">
-            <img src="/images/rhino_research.jpg" alt="Researching Rhinos" onclick="openModal(this.src)">
-            <img src="/images/rhino_door.jpg" alt="Pulling rhino through door" onclick="openModal(this.src)">
-            <img src="/images/rhino_sleep.jpg" alt="sleeping with rhino" onclick="openModal(this.src)">
-            <img src="/images/acorn_drop.jpg" alt="Acorn Drop" onclick="openModal(this.src)">
-            <img src="/images/the_chase.jpg" alt="the chase" onclick="openModal(this.src)">
+        <section class="gallery-section">
+            <span class="subtitle" style="margin-bottom: 1rem;">PORTFOLIO</span>
+            <section class="gallery">
+                <img src="/images/raccoons.jpg" alt="Raccoon mischief" onclick="openModal(this.src)">
+                <img src="/images/egg_heist.jpg" alt="Egg Heist" onclick="openModal(this.src)">
+                <img src="/images/honey_yoga.jpg" alt="Frog and Bear Yoga" onclick="openModal(this.src)">
+                <img src="/images/rhino_research.jpg" alt="Researching Rhinos" onclick="openModal(this.src)">
+                <img src="/images/rhino_door.jpg" alt="Pulling rhino through door" onclick="openModal(this.src)">
+                <img src="/images/rhino_sleep.jpg" alt="sleeping with rhino" onclick="openModal(this.src)">
+                <img src="/images/acorn_drop.jpg" alt="Acorn Drop" onclick="openModal(this.src)">
+                <img src="/images/the_chase.jpg" alt="the chase" onclick="openModal(this.src)">
+            </section>
         </section>
         <section id="about" style="margin: 4rem 0; text-align: center;">
             <span class="subtitle" style="margin-bottom: 1rem;">ABOUT ME</span>
             <p style="max-width: 600px; margin: 0 auto; line-height: 1.6;">
-I’m an author-illustrator and homeschool dad in Alpharetta, Georgia, where I balance writing picture books with lesson plans, snack duty, and spontaneous craft projects. My stories are full of heart, humor, and expressive characters—drawing inspiration from the everyday chaos and magic of life with kids.
+I'm an author-illustrator and homeschool dad in Alpharetta, Georgia, where I balance writing picture books with lesson plans, snack duty, and spontaneous craft projects. My stories are full of heart, humor, and expressive characters—drawing inspiration from the everyday chaos and magic of life with kids.
             </p>
         </section>
         <section id="contact" style="margin: 4rem 0; text-align: center;">
