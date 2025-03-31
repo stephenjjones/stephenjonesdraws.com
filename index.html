@@ -33,7 +33,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, max-content)); /* Responsive columns */
+            grid-template-columns: repeat(auto-fit, minmax(450px, max-content)); /* Increased from 350px */
             gap: 1rem;
             padding: 1rem;
             justify-content: center; /* Centers the grid items */
@@ -41,7 +41,7 @@
 
         /* Gallery Items */
         .gallery img {
-            height: 250px;
+            height: 350px; /* Increased from 250px */
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease-in-out;
@@ -173,12 +173,13 @@
         <section class="gallery-section">
             <span class="subtitle" style="margin-bottom: 1rem;">PORTFOLIO</span>
             <section class="gallery">
-                <img src="/images/raccoons.jpg" alt="Raccoon mischief" onclick="openModal(this.src)">
-                <img src="/images/egg_heist.jpg" alt="Egg Heist" onclick="openModal(this.src)">
-                <img src="/images/honey_yoga.jpg" alt="Frog and Bear Yoga" onclick="openModal(this.src)">
                 <img src="/images/rhino_research.jpg" alt="Researching Rhinos" onclick="openModal(this.src)">
                 <img src="/images/rhino_door.jpg" alt="Pulling rhino through door" onclick="openModal(this.src)">
                 <img src="/images/rhino_sleep.jpg" alt="sleeping with rhino" onclick="openModal(this.src)">
+                <img src="/images/raccoons.jpg" alt="Raccoon mischief" onclick="openModal(this.src)">
+                <img src="/images/egg_heist.jpg" alt="Egg Heist" onclick="openModal(this.src)">
+                <img src="/images/honey_yoga.jpg" alt="Frog and Bear Yoga" onclick="openModal(this.src)">
+                
                 <img src="/images/acorn_drop.jpg" alt="Acorn Drop" onclick="openModal(this.src)">
                 <img src="/images/the_chase.jpg" alt="the chase" onclick="openModal(this.src)">
             </section>
